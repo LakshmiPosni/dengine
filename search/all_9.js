@@ -7,8 +7,7 @@ var searchData=
   ['playerarrowdetails_4',['playerArrowDetails',['../class_game_model.html#acbfa528a36b0bedb9a6c97fb0c373cb8',1,'GameModel']]],
   ['playerlocationdetails_5',['playerLocationDetails',['../class_game_model.html#a04fb55e74e6f0829c6ce39cb457a3d0c',1,'GameModel']]],
   ['playertreasuredetails_6',['playerTreasureDetails',['../class_game_model.html#a01b98d4231028bd7498a291ca760f433',1,'GameModel']]],
-  ['playsound_7',['playSound',['../class_audio_component.html#ab5656bc91001c09858625529ed9bb2ce',1,'AudioComponent']]],
-  ['printdungeon_8',['printDungeon',['../class_dungeon.html#adc239d9b1247e4c3a166df325a1db837',1,'Dungeon']]],
-  ['printmap_9',['PrintMap',['../class_tile_map_component.html#ad74bd890fb494d89958b4bc67686bdc6',1,'TileMapComponent']]],
-  ['printmaze_10',['printMaze',['../class_game_model.html#ae9ba004fec9e778d0b84cc40a6f28b3b',1,'GameModel']]]
+  ['printdungeon_7',['printDungeon',['../class_dungeon.html#adc239d9b1247e4c3a166df325a1db837',1,'Dungeon']]],
+  ['printmap_8',['PrintMap',['../class_tile_map_component.html#ad74bd890fb494d89958b4bc67686bdc6',1,'TileMapComponent']]],
+  ['printmaze_9',['printMaze',['../class_game_model.html#ae9ba004fec9e778d0b84cc40a6f28b3b',1,'GameModel']]]
 ];

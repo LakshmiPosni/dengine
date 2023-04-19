@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/ArrowSpriteComponent.hpp Source File</title>
+<title>dengine: include/ArrowSpriteComponent.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">dengine
    </div>
+   <div id="projectbrief">This is the Documentation for dengine</div>
   </td>
  </tr>
  </tbody>
@@ -96,7 +97,7 @@ $(document).ready(function(){initNavTree('_arrow_sprite_component_8hpp_source.ht
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ASPRITE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;IGraphicsEngineRenderer.hpp&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;TinyMath.hpp&quot;</span></div>
@@ -115,38 +116,36 @@ $(document).ready(function(){initNavTree('_arrow_sprite_component_8hpp_source.ht
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow_sprite_component.html#a7bd434102256657e2fd720cba10be327">Update</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow_sprite_component.html#a8709afa91fb8ae4a5cc0196c23789601">Render</a>(SDL_Renderer* renderer) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow_sprite_component.html#a889721d3ae1cd53ad30abff3291be3c6">LoadImage</a>(std::string arrowFile,SDL_Renderer* ren);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow_sprite_component.html#af6f886eec56da211cde82d181e27d986">setType</a>(std::string type);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow_sprite_component.html#ad895d1e09654759648836010b4c4a6e9">UnSetPosition</a>(<span class="keywordtype">int</span> caveId);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_class" href="class_transform_component.html">TransformComponent</a>* m_transformComponent;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::unordered_map&lt;int, const Vec2D*&gt; arrow_map_mPosition;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mCurrentFrame{1};</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mLastFrame{7};</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// An SDL Surface contains pixel data to draw an image</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    SDL_Surface*    mSpriteSheet =  <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    SDL_Texture*    mTexture     =  <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    SDL_Rect        mSrc;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    SDL_Rect        mDest;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::vector&lt;SDL_Texture* &gt; attack_textures;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    std::vector&lt;SDL_Texture* &gt; idle_textures;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::vector&lt;SDL_Texture* &gt; death_textures;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::vector&lt;SDL_Texture* &gt; walk_textures;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    SDL_Texture* arrowTexture;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::string render_type;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">int</span> counter =0;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">int</span> arrowPixel;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> setType(std::string type);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> UnSetPosition(<span class="keywordtype">int</span> caveId);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="class_transform_component.html">TransformComponent</a>* m_transformComponent;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::unordered_map&lt;int, const Vec2D*&gt; arrow_map_mPosition;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mCurrentFrame{1};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    mLastFrame{7};</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// An SDL Surface contains pixel data to draw an image</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    SDL_Surface*    mSpriteSheet =  <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    SDL_Texture*    mTexture     =  <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    SDL_Rect        mSrc;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    SDL_Rect        mDest;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::vector&lt;SDL_Texture* &gt; attack_textures;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;SDL_Texture* &gt; idle_textures;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;SDL_Texture* &gt; death_textures;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::vector&lt;SDL_Texture* &gt; walk_textures;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    SDL_Texture* arrowTexture;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::string render_type;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">int</span> counter =0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">int</span> arrowPixel;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_arrow_sprite_component_html"><div class="ttname"><a href="class_arrow_sprite_component.html">ArrowSpriteComponent</a></div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.hpp:19</div></div>
 <div class="ttc" id="aclass_arrow_sprite_component_html_a01d9bfca2ff3c6467d00c53f91ba0bd0"><div class="ttname"><a href="class_arrow_sprite_component.html#a01d9bfca2ff3c6467d00c53f91ba0bd0">ArrowSpriteComponent::SetPosition</a></div><div class="ttdeci">void SetPosition(std::vector&lt; int &gt; caveId, std::vector&lt; int &gt; x, std::vector&lt; int &gt; y)</div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.cpp:21</div></div>
 <div class="ttc" id="aclass_arrow_sprite_component_html_a7bd434102256657e2fd720cba10be327"><div class="ttname"><a href="class_arrow_sprite_component.html#a7bd434102256657e2fd720cba10be327">ArrowSpriteComponent::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.cpp:45</div></div>
 <div class="ttc" id="aclass_arrow_sprite_component_html_a7f3445db07eb40f464ab1a4b65a3c2cf"><div class="ttname"><a href="class_arrow_sprite_component.html#a7f3445db07eb40f464ab1a4b65a3c2cf">ArrowSpriteComponent::~ArrowSpriteComponent</a></div><div class="ttdeci">~ArrowSpriteComponent()</div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.cpp:12</div></div>
 <div class="ttc" id="aclass_arrow_sprite_component_html_a8709afa91fb8ae4a5cc0196c23789601"><div class="ttname"><a href="class_arrow_sprite_component.html#a8709afa91fb8ae4a5cc0196c23789601">ArrowSpriteComponent::Render</a></div><div class="ttdeci">void Render(SDL_Renderer *renderer) override</div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.cpp:96</div></div>
 <div class="ttc" id="aclass_arrow_sprite_component_html_a889721d3ae1cd53ad30abff3291be3c6"><div class="ttname"><a href="class_arrow_sprite_component.html#a889721d3ae1cd53ad30abff3291be3c6">ArrowSpriteComponent::LoadImage</a></div><div class="ttdeci">void LoadImage(std::string arrowFile, SDL_Renderer *ren)</div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.cpp:137</div></div>
-<div class="ttc" id="aclass_arrow_sprite_component_html_ad895d1e09654759648836010b4c4a6e9"><div class="ttname"><a href="class_arrow_sprite_component.html#ad895d1e09654759648836010b4c4a6e9">ArrowSpriteComponent::UnSetPosition</a></div><div class="ttdeci">void UnSetPosition(int caveId)</div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.cpp:90</div></div>
-<div class="ttc" id="aclass_arrow_sprite_component_html_af6f886eec56da211cde82d181e27d986"><div class="ttname"><a href="class_arrow_sprite_component.html#af6f886eec56da211cde82d181e27d986">ArrowSpriteComponent::setType</a></div><div class="ttdeci">void setType(std::string type)</div><div class="ttdef"><b>Definition:</b> ArrowSpriteComponent.cpp:134</div></div>
 <div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> Component.hpp:7</div></div>
 <div class="ttc" id="aclass_transform_component_html"><div class="ttname"><a href="class_transform_component.html">TransformComponent</a></div><div class="ttdef"><b>Definition:</b> TransformComponent.hpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Engine Class Reference</title>
+<title>dengine: Engine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">dengine
    </div>
+   <div id="projectbrief">This is the Documentation for dengine</div>
   </td>
  </tr>
  </tbody>
@@ -110,14 +111,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac84eefe06226f430a2448306e6fd2579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde70aed0043e2e2091d0bb6cce8e3c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#acde70aed0043e2e2091d0bb6cce8e3c1">Render</a> ()</td></tr>
 <tr class="separator:acde70aed0043e2e2091d0bb6cce8e3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ec9d3d7dc0f9e79032dd83801778eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a9ec9d3d7dc0f9e79032dd83801778eaf">MainGameLoop</a> ()</td></tr>
-<tr class="separator:a9ec9d3d7dc0f9e79032dd83801778eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27317b5ff04082b1057539d920d4994"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#ae27317b5ff04082b1057539d920d4994">MainGameLoop</a> ()</td></tr>
+<tr class="separator:ae27317b5ff04082b1057539d920d4994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fbe9f5cb4abc3572e432cae1f154817"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a1fbe9f5cb4abc3572e432cae1f154817">Start</a> ()</td></tr>
 <tr class="separator:a1fbe9f5cb4abc3572e432cae1f154817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dbd2c0a65e642baa7eaa97caa6e4e64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a3dbd2c0a65e642baa7eaa97caa6e4e64">Shutdown</a> ()</td></tr>
 <tr class="separator:a3dbd2c0a65e642baa7eaa97caa6e4e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86d0b632686251e9a9e82ac26d2ea5b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#a86d0b632686251e9a9e82ac26d2ea5b8">InitializeGraphicsSubSystem</a> (int w, int h)</td></tr>
-<tr class="separator:a86d0b632686251e9a9e82ac26d2ea5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7d756399efd43b2b80da65d928045d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine.html#ab7d756399efd43b2b80da65d928045d9">InitializeGraphicsSubSystem</a> (int w, int h, std::string tileImg, std::string playerImg, std::string monsterImg)</td></tr>
+<tr class="separator:ab7d756399efd43b2b80da65d928045d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab05e2cc556377ccd289583cd6412d51"><td class="memItemLeft" align="right" valign="top"><a id="aab05e2cc556377ccd289583cd6412d51" name="aab05e2cc556377ccd289583cd6412d51"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>renderStartScreen</b> (bool *quit)</td></tr>
+<tr class="separator:aab05e2cc556377ccd289583cd6412d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class sets up the main game engine </p>
@@ -160,8 +164,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a86d0b632686251e9a9e82ac26d2ea5b8" name="a86d0b632686251e9a9e82ac26d2ea5b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86d0b632686251e9a9e82ac26d2ea5b8">&#9670;&#160;</a></span>InitializeGraphicsSubSystem()</h2>
+<a id="ab7d756399efd43b2b80da65d928045d9" name="ab7d756399efd43b2b80da65d928045d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d756399efd43b2b80da65d928045d9">&#9670;&#160;</a></span>InitializeGraphicsSubSystem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,7 +180,25 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>tileImg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>playerImg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>monsterImg</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -208,14 +230,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9ec9d3d7dc0f9e79032dd83801778eaf" name="a9ec9d3d7dc0f9e79032dd83801778eaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ec9d3d7dc0f9e79032dd83801778eaf">&#9670;&#160;</a></span>MainGameLoop()</h2>
+<a id="ae27317b5ff04082b1057539d920d4994" name="ae27317b5ff04082b1057539d920d4994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27317b5ff04082b1057539d920d4994">&#9670;&#160;</a></span>MainGameLoop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Engine::MainGameLoop </td>
+          <td class="memname">bool Engine::MainGameLoop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

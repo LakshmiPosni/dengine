@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/MonsterSpriteComponent.hpp Source File</title>
+<title>dengine: include/MonsterSpriteComponent.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">dengine
    </div>
+   <div id="projectbrief">This is the Documentation for dengine</div>
   </td>
  </tr>
  </tbody>
@@ -96,7 +97,7 @@ $(document).ready(function(){initNavTree('_monster_sprite_component_8hpp_source.
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MSPRITE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;IGraphicsEngineRenderer.hpp&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;TinyMath.hpp&quot;</span></div>
@@ -133,18 +134,22 @@ $(document).ready(function(){initNavTree('_monster_sprite_component_8hpp_source.
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;SDL_Texture* &gt; death_textures;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    std::vector&lt;SDL_Texture* &gt; walk_textures;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    std::string render_type;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">int</span> counter =0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">int</span> monsterPixel;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::unordered_map&lt;int, const Vec2D*&gt; deadMonsters;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">int</span> counter =0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">int</span> dcounter = 0;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">int</span> monsterPixel;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    std::unordered_map&lt;int, int&gt; death_counter;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    std::vector&lt;int&gt; erasedDeadMonster;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> Component.hpp:7</div></div>
 <div class="ttc" id="aclass_monster_sprite_component_html"><div class="ttname"><a href="class_monster_sprite_component.html">MonsterSpriteComponent</a></div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.hpp:19</div></div>
 <div class="ttc" id="aclass_monster_sprite_component_html_a055acc3ef40d1abe9d57e7b3dab151e1"><div class="ttname"><a href="class_monster_sprite_component.html#a055acc3ef40d1abe9d57e7b3dab151e1">MonsterSpriteComponent::~MonsterSpriteComponent</a></div><div class="ttdeci">~MonsterSpriteComponent()</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:11</div></div>
 <div class="ttc" id="aclass_monster_sprite_component_html_aa7a3bce0dc5296e20ef447a0dc37a4e6"><div class="ttname"><a href="class_monster_sprite_component.html#aa7a3bce0dc5296e20ef447a0dc37a4e6">MonsterSpriteComponent::SetPosition</a></div><div class="ttdeci">void SetPosition(std::vector&lt; int &gt; caveId, std::vector&lt; int &gt; x, std::vector&lt; int &gt; y)</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:20</div></div>
-<div class="ttc" id="aclass_monster_sprite_component_html_ac0a6741f96ddd06d6432358e621e805a"><div class="ttname"><a href="class_monster_sprite_component.html#ac0a6741f96ddd06d6432358e621e805a">MonsterSpriteComponent::Render</a></div><div class="ttdeci">void Render(SDL_Renderer *renderer) override</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:67</div></div>
-<div class="ttc" id="aclass_monster_sprite_component_html_ac1efa9accbc1377949baa7995f1601b1"><div class="ttname"><a href="class_monster_sprite_component.html#ac1efa9accbc1377949baa7995f1601b1">MonsterSpriteComponent::LoadImage</a></div><div class="ttdeci">void LoadImage(std::string monsterCharacter, SDL_Renderer *ren)</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:106</div></div>
-<div class="ttc" id="aclass_monster_sprite_component_html_aed7f91df02ac36396f32ef9712615316"><div class="ttname"><a href="class_monster_sprite_component.html#aed7f91df02ac36396f32ef9712615316">MonsterSpriteComponent::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:48</div></div>
+<div class="ttc" id="aclass_monster_sprite_component_html_ac0a6741f96ddd06d6432358e621e805a"><div class="ttname"><a href="class_monster_sprite_component.html#ac0a6741f96ddd06d6432358e621e805a">MonsterSpriteComponent::Render</a></div><div class="ttdeci">void Render(SDL_Renderer *renderer) override</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:72</div></div>
+<div class="ttc" id="aclass_monster_sprite_component_html_ac1efa9accbc1377949baa7995f1601b1"><div class="ttname"><a href="class_monster_sprite_component.html#ac1efa9accbc1377949baa7995f1601b1">MonsterSpriteComponent::LoadImage</a></div><div class="ttdeci">void LoadImage(std::string monsterCharacter, SDL_Renderer *ren)</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:131</div></div>
+<div class="ttc" id="aclass_monster_sprite_component_html_aed7f91df02ac36396f32ef9712615316"><div class="ttname"><a href="class_monster_sprite_component.html#aed7f91df02ac36396f32ef9712615316">MonsterSpriteComponent::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdef"><b>Definition:</b> MonsterSpriteComponent.cpp:53</div></div>
 <div class="ttc" id="aclass_transform_component_html"><div class="ttname"><a href="class_transform_component.html">TransformComponent</a></div><div class="ttdef"><b>Definition:</b> TransformComponent.hpp:8</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

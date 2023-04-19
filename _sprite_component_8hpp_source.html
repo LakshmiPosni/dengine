@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/SpriteComponent.hpp Source File</title>
+<title>dengine: include/SpriteComponent.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,8 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">dengine
    </div>
+   <div id="projectbrief">This is the Documentation for dengine</div>
   </td>
  </tr>
  </tbody>
@@ -96,7 +97,7 @@ $(document).ready(function(){initNavTree('_sprite_component_8hpp_source.html',''
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define SPRITE_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;IGraphicsEngineRenderer.hpp&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;TinyMath.hpp&quot;</span></div>
@@ -125,23 +126,25 @@ $(document).ready(function(){initNavTree('_sprite_component_8hpp_source.html',''
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    SDL_Texture*    mTexture     =  <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    SDL_Rect        mSrc;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    SDL_Rect        mDest;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::vector&lt;SDL_Texture* &gt; attack_textures;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;SDL_Texture* &gt; idle_textures;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::vector&lt;SDL_Texture* &gt; death_textures;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::vector&lt;SDL_Texture* &gt; walk_textures;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::string render_type;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">int</span> counter =0;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">int</span> characterPixel;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>};</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    std::vector&lt;SDL_Texture* &gt; attack_right_textures;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::vector&lt;SDL_Texture* &gt; attack_left_textures;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    std::vector&lt;SDL_Texture* &gt; idle_textures;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    std::vector&lt;SDL_Texture* &gt; death_textures;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    std::vector&lt;SDL_Texture* &gt; walk_textures;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::string render_type;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">int</span> counter =0;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">int</span> characterPixel;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">float</span> anim_delay = 0.25;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdef"><b>Definition:</b> Component.hpp:7</div></div>
 <div class="ttc" id="aclass_sprite_component_html"><div class="ttname"><a href="class_sprite_component.html">SpriteComponent</a></div><div class="ttdef"><b>Definition:</b> SpriteComponent.hpp:17</div></div>
 <div class="ttc" id="aclass_sprite_component_html_a856577214b1e0ef889ab97915c6f3dc8"><div class="ttname"><a href="class_sprite_component.html#a856577214b1e0ef889ab97915c6f3dc8">SpriteComponent::SetPosition</a></div><div class="ttdeci">void SetPosition(int x, int y)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.cpp:20</div></div>
 <div class="ttc" id="aclass_sprite_component_html_a9ef55748bd7bdab2b58d4a34e426ad75"><div class="ttname"><a href="class_sprite_component.html#a9ef55748bd7bdab2b58d4a34e426ad75">SpriteComponent::Update</a></div><div class="ttdeci">void Update() override</div><div class="ttdef"><b>Definition:</b> SpriteComponent.cpp:29</div></div>
-<div class="ttc" id="aclass_sprite_component_html_aae3aa99dce16fd729789f9278eaaddd9"><div class="ttname"><a href="class_sprite_component.html#aae3aa99dce16fd729789f9278eaaddd9">SpriteComponent::LoadImage</a></div><div class="ttdeci">void LoadImage(std::string playerCharacter, SDL_Renderer *ren)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.cpp:105</div></div>
+<div class="ttc" id="aclass_sprite_component_html_aae3aa99dce16fd729789f9278eaaddd9"><div class="ttname"><a href="class_sprite_component.html#aae3aa99dce16fd729789f9278eaaddd9">SpriteComponent::LoadImage</a></div><div class="ttdeci">void LoadImage(std::string playerCharacter, SDL_Renderer *ren)</div><div class="ttdef"><b>Definition:</b> SpriteComponent.cpp:235</div></div>
 <div class="ttc" id="aclass_sprite_component_html_add14acc8523a724c112e6c93b750b60e"><div class="ttname"><a href="class_sprite_component.html#add14acc8523a724c112e6c93b750b60e">SpriteComponent::~SpriteComponent</a></div><div class="ttdeci">~SpriteComponent()</div><div class="ttdef"><b>Definition:</b> SpriteComponent.cpp:11</div></div>
-<div class="ttc" id="aclass_sprite_component_html_ae0fdca26ae5beb6602cce7edca97c0a4"><div class="ttname"><a href="class_sprite_component.html#ae0fdca26ae5beb6602cce7edca97c0a4">SpriteComponent::Render</a></div><div class="ttdeci">void Render(SDL_Renderer *renderer) override</div><div class="ttdef"><b>Definition:</b> SpriteComponent.cpp:77</div></div>
+<div class="ttc" id="aclass_sprite_component_html_ae0fdca26ae5beb6602cce7edca97c0a4"><div class="ttname"><a href="class_sprite_component.html#ae0fdca26ae5beb6602cce7edca97c0a4">SpriteComponent::Render</a></div><div class="ttdeci">void Render(SDL_Renderer *renderer) override</div><div class="ttdef"><b>Definition:</b> SpriteComponent.cpp:82</div></div>
 <div class="ttc" id="aclass_transform_component_html"><div class="ttname"><a href="class_transform_component.html">TransformComponent</a></div><div class="ttdef"><b>Definition:</b> TransformComponent.hpp:8</div></div>
 <div class="ttc" id="astruct_vec2_d_html"><div class="ttname"><a href="struct_vec2_d.html">Vec2D</a></div><div class="ttdef"><b>Definition:</b> TinyMath.hpp:14</div></div>
 </div><!-- fragment --></div><!-- contents -->

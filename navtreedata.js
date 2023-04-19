@@ -24,14 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "My Project", "index.html", [
-    [ "Add any additional notes here", "md__r_e_a_d_m_e.html", [
-      [ "Game/Engine Publicity", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
-      [ "Compilation Instructions", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
-      [ "Project Hieararchy", "md__r_e_a_d_m_e.html#autotoc_md3", [
-        [ "./Engine Directory Organization", "md__r_e_a_d_m_e.html#autotoc_md4", null ]
-      ] ]
-    ] ],
+  [ "dengine", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
